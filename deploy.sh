@@ -1,6 +1,6 @@
 docker build -t rdthomashoutekier/multi-client:latest -t rdthomashoutekier/multi-client:$SHA -f ./client/Dockerfile ./client
 docker build -t rdthomashoutekier/multi-server:latest -t rdthomashoutekier/multi-server:$SHA -f ./server/Dockerfile ./server
-docker build -t rdthomashoutekier/multi-worker:latest -t rdthomashoutekier/multi-worker:$SHA -f ./worker/Dockerfile ./server
+docker build -t rdthomashoutekier/multi-worker:latest -t rdthomashoutekier/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push rdthomashoutekier/multi-client:latest
 docker push rdthomashoutekier/multi-server:latest
