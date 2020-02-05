@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+    name: k8s-houtekier-be-tls
+spec:
+    secretName: k8s-houtekier-be
+    issuerRef:
+        name: letsencrypt-prod
+        kind: ClusterIssuer
+    commonName: houtekier.be
+    dnsNames:
+        - houtekier.be
+        - k8s.houtekier.be
+    acme:
+        config:
+            - http01:
+                ingressClass: nginx
+              domains:
+                - houtekier.be
+                - k8s.houtekier.be
