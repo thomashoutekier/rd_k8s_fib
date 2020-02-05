@@ -7,14 +7,12 @@ spec:
     issuerRef:
         name: letsencrypt-prod
         kind: ClusterIssuer
-    commonName: houtekier.be
+    commonName: k8s.houtekier.be
     dnsNames:
-        - houtekier.be
         - k8s.houtekier.be
     acme:
         config:
             - http01:
                 ingressClass: nginx
               domains:
-                - houtekier.be
                 - k8s.houtekier.be
